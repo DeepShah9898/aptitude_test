@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import RegistrationForm from './components/RegistrationForm';
+import AptitudeTest from './components/AptitudeTest';
+import ThankYouPage from './components/ThankYouPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [step, setStep] = useState(1);
+    const [email, setEmail] = useState('');
+
+    return (
+        <div>
+            {step === 1 && <RegistrationForm onRegister={(userEmail) => { setEmail(userEmail); setStep(2); }} />}
+            {step === 2 && <AptitudeTest userEmail={email} onComplete={() => setStep(3)} />}
+            {step === 3 && <ThankYouPage />}
+        </div>
+    );
+};
 
 export default App;

@@ -1,0 +1,72 @@
+/* Container */
+.logos {
+    width: 120px;
+    height: auto;
+    margin: 10px 0 0 420px;
+    display: block;
+}
+
+.test-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Question Section */
+.question-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Buttons */
+.option-button {
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-button:hover {
+    background-color: #357abd;
+    transform: scale(1.05);
+}
+
+.option-button:active {
+    background-color: #28588e;
+    transform: scale(1);
+}
+
+/* Progress */
+.progress {
+    font-size: 1rem;
+    color: #555555;
+    margin-top: 10px;
+    font-weight: 500;
+}
